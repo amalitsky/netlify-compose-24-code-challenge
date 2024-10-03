@@ -4,11 +4,17 @@
   "description": "",
   "main": "index.js",
   "keywords": [],
+  "scripts": {
+    "deploy": "netlify deploy --prod"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@netlify/blobs": "^8.0.1",
     "@netlify/edge-functions": "^2.10.0",
     "@netlify/functions": "^2.8.1"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.36.4"
   }
 }
