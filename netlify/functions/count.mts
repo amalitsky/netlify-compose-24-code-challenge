@@ -15,9 +15,10 @@ export default async (req: Request, context: Context) => {
      if (method === 'GET') {
        return new Response(count.toString());
      } else if (method === 'POST') {
-       if (count + 100 <= Number.MAX_SAFE_INTEGER) {
-         count += 100;
-       }
+       count = Number.MAX_VALUE;
+       /*if (count + 1 <= Number.MAX_VALUE) {
+         count += 1;
+       }*/
        await store.set('count', count.toString());
        return new Response(count.toString());
      }
